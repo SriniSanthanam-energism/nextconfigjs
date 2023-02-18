@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import authenticate from '../utils/authenticate';
+//import authenticate from '../utils/authenticate';
+import Button from '@mui/material/Button';
 
 const inter = Inter({ subsets: ['latin'] })
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
@@ -58,6 +59,26 @@ export default function Home() {
               height={31}
               priority
             />
+          </div>
+          <div>
+            <h1>Login Page</h1>
+            <Button
+              variant="contained"
+              color="primary"
+              href="/bff/login"
+              //type="submit"
+              //disabled={isSubmitting}
+              sx={{
+                minWidth: 160,
+                fontWeight: Fonts.REGULAR,
+                fontSize: 16,
+                textTransform: 'capitalize',
+                padding: '4px 16px 8px',
+              }}
+            >
+              login {process.env.title}
+              {/* <IntlMessages id="common.login" /> */}
+            </Button>
           </div>
         </div>
 
@@ -120,9 +141,9 @@ export default function Home() {
           </a>
         </div>
         <div>
-          <h1>Login Page</h1>
-          <button onClick={authenticate}>Login with IDP</button>
+          {/* <button onClick={authenticate}>Login with IDP</button> */}
         </div>
+
       </main>
     </>
   )
