@@ -70,7 +70,7 @@ export default function Home() {
               //disabled={isSubmitting}
               sx={{
                 minWidth: 160,
-                fontWeight: Fonts.REGULAR,
+                fontWeight: 400,
                 fontSize: 16,
                 textTransform: 'capitalize',
                 padding: '4px 16px 8px',
